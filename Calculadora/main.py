@@ -120,3 +120,5 @@ while True: # Bucle while para ejecutar la calculadora
 
     else: # Si nada de lo de arriba es verdad, entonces el opereador esta mal
         print("Operador incorrecto")
+        
+# Tlt

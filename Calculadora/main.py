@@ -33,9 +33,9 @@ while True: # Bucle while para ejecutar la calculadora
     time.sleep(.5)
     print("** para Xⁿ")
     print("rz para la raíz de X con índice N")
-
-    time.sleep(.5)
     print("log para logaritmo de X en base N")
+    
+    time.sleep(.5)
     print("pc para el X" + "%" + " de N")
     print("'X' para cerrar")
 
@@ -66,7 +66,8 @@ while True: # Bucle while para ejecutar la calculadora
             time.sleep(.25)
         else: # Si el divisor no es 0, hacer la división
             print(x/n)
-            time.sleep(.25)        
+            time.sleep(.25)
+
     elif operadores == "%": # Módulo, calcula el resto de la división
         if n == 0: # Si el divisor es 0 el resultado es inderteminado
             print("No se puede dividir por 0")
@@ -88,8 +89,11 @@ while True: # Bucle while para ejecutar la calculadora
             print(str(math.sqrt(abs(x))) + " * 𝓲")
             time.sleep(.25)
 
-        elif x < 0 and n > 2: # Raíces negativas de índice superior a 2
-            print("No existe")
+        elif x < 0 and n%2 != 0:
+            print(abs(x)**1/n, "𝓲")    
+	    
+        elif x < 0 and n%2 == 0:
+            print(abs(x)**1/n, "𝓲")
 
         else: # Raíz normal
             print(x**(1/n))
@@ -122,3 +126,4 @@ while True: # Bucle while para ejecutar la calculadora
         print("Operador incorrecto")
         
 # Tlt
+
